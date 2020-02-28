@@ -1,0 +1,47 @@
+1. bee run 异常：
+
+$ bee run
+______
+| ___ \
+| |_/ /  ___   ___
+| ___ \ / _ \ / _ \
+| |_/ /|  __/|  __/
+\____/  \___| \___| v1.10.0
+2020/02/28 11:37:14 INFO     ▶ 0001 Using 'quickstart' as 'appname'
+2020/02/28 11:37:14 INFO     ▶ 0002 Initializing watcher...
+go: cannot find main module; see 'go help modules'
+2020/02/28 11:37:14 ERROR    ▶ 0003 Failed to build the application: go: cannot                                 find main module; see 'go help modules'
+
+
+
+
+$ go mod init quickstart
+go: creating new go.mod: module quickstart
+
+
+$ go mod tidy
+go: finding github.com/shiena/ansicolor latest
+
+
+$ go mod vendor
+
+
+$ bee run
+______
+| ___ \
+| |_/ /  ___   ___
+| ___ \ / _ \ / _ \
+| |_/ /|  __/|  __/
+\____/  \___| \___| v1.10.0
+2020/02/28 11:45:08 INFO     ▶ 0001 Using 'quickstart' as 'appname'
+2020/02/28 11:45:08 INFO     ▶ 0002 Initializing watcher...
+quickstart/controllers
+quickstart/routers
+quickstart
+2020/02/28 11:45:17 SUCCESS  ▶ 0003 Built Successfully!
+2020/02/28 11:45:17 INFO     ▶ 0004 Restarting 'quickstart.exe'...
+2020/02/28 11:45:17 SUCCESS  ▶ 0005 './quickstart.exe' is running...
+2020/02/28 11:45:19.835 [I] [asm_amd64.s:1357]  http server Running on http://:8080
+2020/02/28 11:46:42.827 [D] [server.go:2802]  |            ::1| 200 |         96ms|   match| GET      /     r:/
+2020/02/28 11:46:43.167 [D] [server.go:2802]  |            ::1| 200 |          3ms|   match| GET      /static/js/reload.min.js
+
