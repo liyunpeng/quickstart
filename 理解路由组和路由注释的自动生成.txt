@@ -1,0 +1,15 @@
+在routes的init函数里，
+在routes/routes.go里的init函数添加：
+func init() {
+	ns :=
+		beego.NewNamespace("/v1",
+			beego.NSNamespace("/customer",
+				beego.NSInclude(
+					&controllers.MainController{},
+				),
+			),
+		)
+	beego.AddNamespace(ns)
+}
+bee run 会自动生成两个文件：
+待
