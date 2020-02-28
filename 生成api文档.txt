@@ -1,0 +1,31 @@
+$ bee run -gendoc=true -downdoc=true
+______
+| ___ \
+| |_/ /  ___   ___
+| ___ \ / _ \ / _ \
+| |_/ /|  __/|  __/
+\____/  \___| \___| v1.10.0
+2020/02/28 12:27:53 INFO     ▶ 0001 Using 'quickstart' as 'appname'
+2020/02/28 12:27:53 INFO     ▶ 0002 Downloading 'https://github.com/beego/swagger/archive/v3.zip' to 'swagger.zip'...
+2020/02/28 12:27:58 SUCCESS  ▶ 0003 477861 bytes downloaded!
+2020/02/28 12:27:58 INFO     ▶ 0004 Unzipping 'swagger.zip'...
+2020/02/28 12:27:58 SUCCESS  ▶ 0005 Done! Deleting 'swagger.zip'...
+2020/02/28 12:27:58 INFO     ▶ 0006 Initializing watcher...
+quickstart/controllers
+quickstart/routers
+quickstart
+2020/02/28 12:28:08 INFO     ▶ 0007 Generating the docs...
+2020/02/28 12:28:09 SUCCESS  ▶ 0008 Docs generated!
+2020/02/28 12:28:12 SUCCESS  ▶ 0009 Built Successfully!
+2020/02/28 12:28:12 INFO     ▶ 0010 Restarting 'quickstart.exe'...
+2020/02/28 12:28:12 SUCCESS  ▶ 0011 './quickstart.exe' is running...
+2020/02/28 12:28:13.804 [I] [parser.go:112]  generate router from comments
+2020/02/28 12:28:15.455 [I] [asm_amd64.s:1357]  http server Running on http://:8080
+2020/02/28 12:28:57.718 [D] [server.go:2802]  |            ::1| 404 |          4ms| nomatch| GET      /
+2020/02/28 12:29:00.445 [D] [server.go:2802]  |            ::1| 404 |          7ms| nomatch| GET      /favicon.ico
+2020/02/28 12:29:01.836 [D] [server.go:2802]  |            ::1| 404 |          1ms| nomatch| GET      /
+2020/02/28 12:29:03.603 [D] [server.go:2802]  |            ::1| 404 |         71ms| nomatch| GET      /
+2020/02/28 12:29:06.565 [D] [server.go:2802]  |            ::1| 404 |           0s| nomatch| GET      /
+2020/02/28 12:29:40.153 [D] [server.go:2802]  |            ::1| 200 |         22ms|   match| POST     /v1/customer/backlogin/judge   r:/v1/customer/backlogin/judge
+2020/02/28 12:30:35.789 [D] [server.go:2802]  |            ::1| 404 |         30ms| nomatch| GET      /swagger/
+
