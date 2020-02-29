@@ -5,8 +5,8 @@
 package routers
 
 import (
-	"quickstart/controllers"
 	"github.com/astaxie/beego"
+	"quickstart/controllers"
 )
 
 func init() {
@@ -19,7 +19,9 @@ func init() {
 			),
 		)
 	beego.AddNamespace(ns)
+	beego.Router("/", &controllers.MainController{}, "get:Get")
 }
+
 //
 //func init() {
 //    beego.Router("/", &controllers.MainController{})
